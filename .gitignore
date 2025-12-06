@@ -5,7 +5,7 @@ build/
 *.xcworkspace/xcuserdata/
 *.xcodeproj/xcuserdata/
 
-# Swift Package Manager
+# SwiftPM
 .swiftpm/
 
 # CocoaPods
