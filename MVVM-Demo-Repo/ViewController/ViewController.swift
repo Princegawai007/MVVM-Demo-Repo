@@ -103,3 +103,30 @@ class MyProfileViewController: UIViewController, CLLocationManagerDelegate {
 //    }
 //}
 //
+
+//MARK: ALAMOFIRE USING ASYNC AWAIT
+
+//func leadGenerated() {
+//    Task {
+//        do {
+//            let model = try await MyProfileViewModel.shared.leadGenerated(offset: 0, fetch: 20)
+//            
+//            DispatchQueue.main.async {
+//                self.leadGeneratedModel = [model]
+//                
+//                if model.leads.count == 0 {
+//                    self.leadGenratorCountLabel.text = "0"
+//                } else {
+//                    self.leadGenratorCountLabel.text = "\(model.count ?? 0)"
+//                }
+//            }
+//            
+//        } catch {
+//            DispatchQueue.main.async {
+//                let alert = Alert().alertControllerWith(title: "Alert", message: error.localizedDescription)
+//                self.present(alert, animated: true)
+//            }
+//        }
+//    }
+//}
+//

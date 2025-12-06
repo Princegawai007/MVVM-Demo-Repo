@@ -178,3 +178,55 @@ class MyProfileViewModel: NSObject {
 //    }
 //}
 //
+
+//MARK: ALAMOFIRE USING ASYNC AWAIT
+
+//import Foundation
+//import Alamofire
+//
+//class MyProfileViewModel: NSObject {
+//    
+//    static let shared = MyProfileViewModel()
+//    private let apiEndPoints = APIEndPoints()
+//    
+//    // MARK: - Async/Await Alamofire Method
+//    func leadGenerated(offset: Int, fetch: Int) async throws -> LeadGeneratorModel {
+//        
+//        let token = UserDefaults.standard.string(forKey: "loginToken") ?? ""
+//        
+//        let url = "\(BASE_URL)\(apiEndPoints.login)"
+//        
+//        let params: Parameters = [
+//            "offset": offset,
+//            "fetch": fetch
+//        ]
+//        
+//        let headers: HTTPHeaders = [
+//            "Authorization": "Bearer \(token)",
+//            "Content-Type": "application/json"
+//        ]
+//        
+//        // Alamofire Async Await
+//        return try await withCheckedThrowingContinuation { continuation in
+//            
+//            AF.request(url,
+//                       method: .post,
+//                       parameters: params,
+//                       encoding: JSONEncoding.default,
+//                       headers: headers)
+//                .validate()
+//                .responseDecodable(of: LeadGeneratorModel.self) { response in
+//                    
+//                    switch response.result {
+//                    case .success(let model):
+//                        continuation.resume(returning: model)
+//                        
+//                    case .failure(let error):
+//                        continuation.resume(throwing: error)
+//                    }
+//                }
+//        }
+//    }
+//}
+//
+//
