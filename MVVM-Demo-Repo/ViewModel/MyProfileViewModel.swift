@@ -53,3 +53,73 @@ class MyProfileViewModel: NSObject {
         }
     }
 }
+//MARK: URL SESSION
+
+//import Foundation
+//
+//class MyProfileViewModel: NSObject {
+//
+//    class var sharedInstane: MyProfileViewModel {
+//        struct Singleton {
+//            static let instance = MyProfileViewModel()
+//        }
+//        return Singleton.instance
+//    }
+//
+//    private var apiEndPoints = APIEndPoints()
+//
+//    func leadGenerated(offset: Int, fetch: Int, completionHandler: @escaping (_ success: LeadGeneratorModel?, _ failure: String?) -> Void) {
+//
+//        let token = UserDefaults.standard.string(forKey: "loginToken") ?? ""
+//        let urlString = "\(BASE_URL)\(apiEndPoints.login)"
+//
+//        guard let url = URL(string: urlString) else {
+//            completionHandler(nil, "Invalid URL")
+//            return
+//        }
+//
+//        var request = URLRequest(url: url)
+//        request.httpMethod = "POST"
+//
+//        // Headers
+//        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+//        request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+//
+//        // Body
+//        let params: [String: Any] = ["offset": offset, "fetch": fetch]
+//
+//        do {
+//            request.httpBody = try JSONSerialization.data(withJSONObject: params, options: [])
+//        } catch {
+//            completionHandler(nil, "Invalid Parameters")
+//            return
+//        }
+//
+//        // URLSession Call
+//        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+//
+//            // Error
+//            if let error = error {
+//                completionHandler(nil, error.localizedDescription)
+//                return
+//            }
+//
+//            guard let data = data else {
+//                completionHandler(nil, "No data received")
+//                return
+//            }
+//
+//            do {
+//                let decoder = JSONDecoder()
+//                let responseObject = try decoder.decode(LeadGeneratorModel.self, from: data)
+//                completionHandler(responseObject, nil)
+//            } catch let decodeError {
+//                print("Decoding error:", decodeError)
+//                completionHandler(nil, "Unable to decode response")
+//            }
+//        }
+//
+//        task.resume()
+//    }
+//}
+//

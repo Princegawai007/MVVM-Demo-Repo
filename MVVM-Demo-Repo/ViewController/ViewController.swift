@@ -46,3 +46,33 @@ class MyProfileViewController: UIViewController, CLLocationManagerDelegate {
     }
     
 }
+
+//MARK: URL SESSION
+//
+//func leadGenerated() {
+//    MyProfileViewModel.sharedInstane.leadGenerated(offset: 0, fetch: 20) { success, failure in
+//        
+//        DispatchQueue.main.async {
+//            if let failure = failure {
+//                let alertCtrl = Alert().alertControllerWith(title: "Alert", message: failure)
+//                self.present(alertCtrl, animated: true)
+//                return
+//            }
+//            
+//            guard let success = success else {
+//                let alertCtrl = Alert().alertControllerWith(title: "Alert", message: "Something went wrong")
+//                self.present(alertCtrl, animated: true)
+//                return
+//            }
+//            
+//            if success.success != nil {
+//                self.leadGeneratedModel = [success]
+//                if success.leads.count == 0 {
+//                    self.leadGenratorCountLabel.text = "0"
+//                } else {
+//                    self.leadGenratorCountLabel.text = "\(success.count ?? 0)"
+//                }
+//            }
+//        }
+//    }
+//}
