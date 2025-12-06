@@ -1,0 +1,20 @@
+# Xcode
+DerivedData/
+build/
+*.xcworkspace/xcshareddata/
+*.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+
+# Swift Package Manager
+.swiftpm/
+
+# CocoaPods
+Pods/
+
+# Certificates / Secrets
+*.p12
+*.mobileprovision
+GoogleService-Info.plist
+
+# Misc
+.DS_Store
