@@ -130,3 +130,19 @@ class MyProfileViewController: UIViewController, CLLocationManagerDelegate {
 //    }
 //}
 //
+
+//MARK: MODERN UPDATED 2025 LATEST CODE
+//func leadGenerated() {
+//    Task {
+//        do {
+//            let success = try await MyProfileViewModel().leadGenerated(offset: 0, fetch: 20)
+//            
+//            self.leadGenratorCountLabel.text = "\(success.count ?? 0)"
+//            self.leadGeneratedModel = [success]
+//            
+//        } catch {
+//            let alert = Alert().alertControllerWith(title: "Alert", message: error.localizedDescription)
+//            self.present(alert, animated: true)
+//        }
+//    }
+//}

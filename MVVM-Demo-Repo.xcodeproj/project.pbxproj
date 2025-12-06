@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2C65FE1AA5F3471E7E4C07F1 /* Pods_MVVM_Demo_Repo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 652F70D743C5512372A99503 /* Pods_MVVM_Demo_Repo.framework */; };
 		A36B658E2EE4339B00E29A59 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36B658D2EE4339B00E29A59 /* Utilities.swift */; };
+		A36B65902EE47B4F00E29A59 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36B658F2EE47B4F00E29A59 /* NetworkManager.swift */; };
 		A3A62A492EE431F500D7E588 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A62A482EE431F500D7E588 /* AppDelegate.swift */; };
 		A3A62A4B2EE431F500D7E588 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A62A4A2EE431F500D7E588 /* SceneDelegate.swift */; };
 		A3A62A4D2EE431F500D7E588 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A62A4C2EE431F500D7E588 /* ViewController.swift */; };
@@ -24,6 +25,7 @@
 		479FD5F9AFCA9B47048BC381 /* Pods-MVVM-Demo-Repo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM-Demo-Repo.debug.xcconfig"; path = "Target Support Files/Pods-MVVM-Demo-Repo/Pods-MVVM-Demo-Repo.debug.xcconfig"; sourceTree = "<group>"; };
 		652F70D743C5512372A99503 /* Pods_MVVM_Demo_Repo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVM_Demo_Repo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A36B658D2EE4339B00E29A59 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		A36B658F2EE47B4F00E29A59 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		A3A62A452EE431F500D7E588 /* MVVM-Demo-Repo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVVM-Demo-Repo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3A62A482EE431F500D7E588 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3A62A4A2EE431F500D7E588 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				A36B658D2EE4339B00E29A59 /* Utilities.swift */,
+				A36B658F2EE47B4F00E29A59 /* NetworkManager.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				A36B658E2EE4339B00E29A59 /* Utilities.swift in Sources */,
 				A3A62A4D2EE431F500D7E588 /* ViewController.swift in Sources */,
 				A3A62A642EE432E000D7E588 /* LeadGeneratorModel.swift in Sources */,
+				A36B65902EE47B4F00E29A59 /* NetworkManager.swift in Sources */,
 				A3A62A492EE431F500D7E588 /* AppDelegate.swift in Sources */,
 				A3A62A622EE432A800D7E588 /* MyProfileViewModel.swift in Sources */,
 				A3A62A4B2EE431F500D7E588 /* SceneDelegate.swift in Sources */,

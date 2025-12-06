@@ -230,3 +230,28 @@ class MyProfileViewModel: NSObject {
 //}
 //
 //
+
+
+//MARK: MODERN UPDATED 2025 LATEST CODE
+
+//class MyProfileViewModel {
+//    
+//    func leadGenerated(offset: Int, fetch: Int) async throws -> LeadGeneratorModel {
+//        
+//        let params: Parameters = [
+//            "offset": offset,
+//            "fetch": fetch
+//        ]
+//        
+//        let token = UserDefaults.standard.string(forKey: "loginToken") ?? ""
+//        
+//        let headers: HTTPHeaders = [
+//            "Authorization": "Bearer \(token)"
+//        ]
+//        
+//        let url = "\(BASE_URL)\(APIEndPoints().login)"
+//        
+//        return try await NetworkManager.shared.post(url, params: params, headers: headers)
+//    }
+//}
+//
