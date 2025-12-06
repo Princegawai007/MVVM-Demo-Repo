@@ -53,6 +53,7 @@ class MyProfileViewModel: NSObject {
         }
     }
 }
+
 //MARK: URL SESSION
 
 //import Foundation
@@ -120,6 +121,60 @@ class MyProfileViewModel: NSObject {
 //        }
 //
 //        task.resume()
+//    }
+//}
+//
+
+
+//MARK: URL SESSION USING ASYNC AWAIT
+//import Foundation
+//
+//class MyProfileViewModel: NSObject {
+//    
+//    static let shared = MyProfileViewModel()
+//    private var apiEndPoints = APIEndPoints()
+//    
+//    // MARK: - Async Await API
+//    func leadGenerated(offset: Int, fetch: Int) async throws -> LeadGeneratorModel {
+//        
+//        let token = UserDefaults.standard.string(forKey: "loginToken") ?? ""
+//        let urlString = "\(BASE_URL)\(apiEndPoints.login)"
+//        
+//        guard let url = URL(string: urlString) else {
+//            throw URLError(.badURL)
+//        }
+//        
+//        var request = URLRequest(url: url)
+//        request.httpMethod = "POST"
+//        
+//        // Headers
+//        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+//        request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+//        
+//        // Body
+//        let params: [String: Any] = [
+//            "offset": offset,
+//            "fetch": fetch
+//        ]
+//        
+//        request.httpBody = try JSONSerialization.data(withJSONObject: params, options: [])
+//        
+//        // Async Await URLSession
+//        let (data, response) = try await URLSession.shared.data(for: request)
+//        
+//        // Validate HTTP Status
+//        if let httpResponse = response as? HTTPURLResponse,
+//           !(200...299).contains(httpResponse.statusCode) {
+//            throw URLError(.badServerResponse)
+//        }
+//        
+//        // Decode
+//        do {
+//            return try JSONDecoder().decode(LeadGeneratorModel.self, from: data)
+//        } catch {
+//            print("Decode error:", error)
+//            throw error
+//        }
 //    }
 //}
 //

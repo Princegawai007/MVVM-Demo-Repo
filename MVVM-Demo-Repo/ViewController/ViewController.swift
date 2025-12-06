@@ -76,3 +76,30 @@ class MyProfileViewController: UIViewController, CLLocationManagerDelegate {
 //        }
 //    }
 //}
+
+//MARK: URL SESSION USING ASYNC AWAIT
+//
+//func leadGenerated() {
+//    Task {
+//        do {
+//            let result = try await MyProfileViewModel.shared.leadGenerated(offset: 0, fetch: 20)
+//            
+//            DispatchQueue.main.async {
+//                self.leadGeneratedModel = [result]
+//                
+//                if result.leads.count == 0 {
+//                    self.leadGenratorCountLabel.text = "0"
+//                } else {
+//                    self.leadGenratorCountLabel.text = "\(result.count ?? 0)"
+//                }
+//            }
+//            
+//        } catch {
+//            DispatchQueue.main.async {
+//                let alert = Alert().alertControllerWith(title: "Error", message: error.localizedDescription)
+//                self.present(alert, animated: true)
+//            }
+//        }
+//    }
+//}
+//
